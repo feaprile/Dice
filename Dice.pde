@@ -1,13 +1,13 @@
 void setup() {
-  size(800, 600);
+  size(600, 422);
   noLoop();
 }
 
 void draw() { //Draws the dice repeatedly with a loop, and sets up the show and numberPips functions (parts of the things the dice do, show up, and show up with a certain amount of Pips)
   int outputValue = 0;
   background(56, 130, 185);
-  for (int y = 5; y < 582; y += 60) {
-    for (int x = 5; x < 580; x += 60) {
+  for (int y = 5; y < 372; y += 60) {
+    for (int x = 5; x < 390; x += 60) {
       Die One = new Die(x, y);
       One.numberPips();
       One.show();
@@ -15,10 +15,10 @@ void draw() { //Draws the dice repeatedly with a loop, and sets up the show and 
     }
   }// this part is to draw the text
   fill(0, 0, 0, 88);
-  rect(612, 263, 160, 50, 16);
+  rect(427, 200, 160, 50, 16);
   fill(256, 256, 256);
   textSize(35);
-  text("Total: " + outputValue, 620, 300);
+  text("Total: " + outputValue, 434, 237);
 }
 
 void mousePressed() { //this is to program when the draw function happens
