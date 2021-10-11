@@ -36,7 +36,7 @@ class Die //this is the class that we are using
   void numberPips() { //Just the roll() function, chooses how many pips to show, at random
     Pips = (int)(Math.random() * 6) + 1;
   }
-  void show() {// second action of the dice, which is to make the pips show up on them, and based on amount of pips chosen above, the placement of them changes 
+  void show() {// second action of the dice, which is to make the pips show up on them, and based on amount of pips chosen above, the placement of them changes
     fill(0, 0, 0);
     rect(myX, myY, 50, 50, 10);
     fill(256, 256, 256);
