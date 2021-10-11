@@ -3,7 +3,7 @@ void setup() {
   noLoop();
 }
 
-void draw() { //Draws the dice repeatedly with a loop, and sets up the show and numberPips functions (parts of the things the dice do, show up, and show up with a certain amount of Pips)
+void draw() { 
   int outputValue = 0;
   background(56, 130, 185);
   for (int y = 5; y < 372; y += 60) {
@@ -13,7 +13,7 @@ void draw() { //Draws the dice repeatedly with a loop, and sets up the show and 
       One.show();
       outputValue += One.Pips;
     }
-  }// this part is to draw the text
+  }
   fill(0, 0, 0, 88);
   rect(427, 200, 160, 50, 16);
   fill(256, 256, 256);
@@ -21,22 +21,20 @@ void draw() { //Draws the dice repeatedly with a loop, and sets up the show and 
   text("Total: " + outputValue, 434, 237);
 }
 
-void mousePressed() { //this is to program when the draw function happens
+void mousePressed() { 
   redraw();
 }
 
-class Die //this is the class that we are using
-{
-  int myX, myY, Pips; //This line and up to the
-  //void numberPips line = constructor
+class Die {
+  int myX, myY, Pips;
   Die(int x, int y) {
     myX = x;
     myY = y;
   }
-  void numberPips() { //Just the roll() function, chooses how many pips to show, at random
+  void numberPips() { 
     Pips = (int)(Math.random() * 6) + 1;
   }
-  void show() {// second action of the dice, which is to make the pips show up on them, and based on amount of pips chosen above, the placement of them changes
+  void show() {
     fill(0, 0, 0);
     rect(myX, myY, 50, 50, 10);
     fill(256, 256, 256);
